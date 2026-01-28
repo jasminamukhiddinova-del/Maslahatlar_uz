@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parolni tiklash - Online Doctor</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(to right, #fce4ec, #f8bbd0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .reset-container {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 380px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #c2185b;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      text-align: left;
+      margin-bottom: 5px;
+      color: #333;
+      font-weight: 500;
+    }
+
+    input[type="email"] {
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #c2185b;
+      box-shadow: 0 0 5px #f48fb1;
+    }
+
+    button {
+      background-color: #c2185b;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #880e4f;
+    }
+
+    .extra-links {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .extra-links a {
+      color: #c2185b;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .extra-links a:hover {
+      text-decoration: underline;
+    }
+
+    .message {
+      margin-top: 12px;
+      color: green;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- O'rnatilgan login.html kodiga qo'shimcha -->
+      <form id="resetForm" method="post" action="{% url 'password_reset_email' %}">
+          <input type="email" id="resetEmail" name="email" placeholder="example@gmail.com" required>
+          <button type="submit">Yuborish</button>
+      </form>
+    
+
+</body>
+</html>

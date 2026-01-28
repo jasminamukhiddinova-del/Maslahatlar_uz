@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil</title>
+
+    <style>
+        *{
+            margin: 0; padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background: #f4f7fa;
+        }
+
+        .container{
+            max-width: 900px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .header{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .header img{
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid #4a90e2;
+            object-fit: cover;
+        }
+
+        .name-section h2{
+            font-size: 28px;
+            color: #333;
+        }
+
+        .name-section p{
+            font-size: 15px;
+            color: #555;
+        }
+
+        .info-box{
+            margin-top: 25px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .card{
+            background: #f8fbff;
+            padding: 20px;
+            border-left: 5px solid #4a90e2;
+            border-radius: 10px;
+        }
+
+        .card h3{
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #084b7a;
+        }
+
+        .card p{
+            font-size: 16px;
+            line-height: 24px;
+            color: #444;
+        }
+
+        .edit-btn{
+            margin-top: 30px;
+            display: inline-block;
+            background: #4a90e2;
+            padding: 12px 25px;
+            color: #fff;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .edit-btn:hover{
+            background: #084b7a;
+        }
+
+        @media(max-width: 600px){
+            .info-box{
+                grid-template-columns: 1fr;
+            }
+
+            .header{
+                flex-direction: column;
+            }
+
+            .header img{
+                width: 100px;
+                height: 100px;
+            }
+
+            .name-section h2{
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <!-- Profile Image -->
+        <img src="/rasm_videolar/bemor_panel_icon.ico" alt="profil rasm">
+
+        <div class="name-section">
+            <h2>Jasmina</h2>
+            <p>jasminamukhiddinova@gmail.com</p>
+            <p>Roli: <b>bemor</b></p>
+        </div>
+    </div>
+
+    <div class="info-box">
+        <div class="card">
+            <h3>Shaxsiy ma’lumotlar</h3>
+            <p>Ism: Jasmina</p>
+            <p>Familiya: Muxiddinova</p>
+            <p>Telefon: (95)313-33-64</p>
+            <p>Tug‘ilgan sana: 08.10.2005</p>
+        </div>
+
+        <div class="card">
+            <h3>Tizim ma’lumotlari</h3>
+            <p>Ro‘yxatdan o‘tgan: 13.11.2025</p>
+            <p>Oxirgi kirishi: 17.11.2025</p>
+            <p>Email tasdiqlangan: ✔️</p>
+        </div>
+    </div>
+
+    <a href="/edit-profile" class="edit-btn">Profilni tahrirlash</a>
+</div>
+
+</body>
+</html>

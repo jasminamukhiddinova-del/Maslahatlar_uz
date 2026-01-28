@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shifokor profilini tahrirlash</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .profile-photo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-photo img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #007bff;
+        }
+
+        .profile-photo input {
+            margin-top: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 15px;
+            color: #444;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: #007bff;
+        }
+
+        .btn-save {
+            width: 100%;
+            padding: 12px;
+            background: #007bff;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn-save:hover {
+            background: #005fcc;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Shifokor profilini tahrirlash</h2>
+
+    <div class="profile-photo">
+        <img src="/static/default_doctor.png" alt="Profil rasmi">
+        <input type="file" accept="image/*">
+    </div>
+
+    <form>
+
+        <div class="form-group">
+            <label>Ism</label>
+            <input type="text" placeholder="Ismingiz">
+        </div>
+
+        <div class="form-group">
+            <label>Familiya</label>
+            <input type="text" placeholder="Familiyangiz">
+        </div>
+
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="Email manzil">
+        </div>
+
+        <div class="form-group">
+            <label>Telefon raqam</label>
+            <input type="text" placeholder="+998 ** *** ** **">
+        </div>
+
+        <div class="form-group">
+            <label>Yosh</label>
+            <input type="number" placeholder="Yoshingiz">
+        </div>
+
+        <div class="form-group">
+            <label>Jinsi</label>
+            <select>
+                <option>Erkak</option>
+                <option>Ayol</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Mutaxassislik (soha)</label>
+            <select>
+                <option>Kardiolog</option>
+                <option>Travmatolog</option>
+                <option>Pediatr</option>
+                <option>Neurolog</option>
+                <option>Psixolog</option>
+                <option>Dermatolog</option>
+                <option>Urolog</option>
+                <option>Onkolog</option>
+                <option>Stomatolog</option>
+                <option>Boshqa...</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Ish tajribasi (yil)</label>
+            <input type="number" placeholder="Masalan: 5">
+        </div>
+
+        <div class="form-group">
+            <label>Manzil</label>
+            <textarea rows="3" placeholder="Yashash manzilingiz..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Qo‘shimcha ma’lumot</label>
+            <textarea rows="4" placeholder="O'zingiz haqingizda qo'shimcha ma'lumot..."></textarea>
+        </div>
+
+        <button class="btn-save">O'zgarishlarni saqlash</button>
+
+    </form>
+</div>
+
+</body>
+</html>

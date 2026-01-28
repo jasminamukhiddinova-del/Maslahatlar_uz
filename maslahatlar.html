@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shifokor Maslahatlari</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Arial", sans-serif;
+        }
+
+        body {
+            background: #f1f3f6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        .search-box {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-box input {
+            width: 70%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: .3s;
+        }
+
+        .search-box input:focus {
+            border-color: #0d6efd;
+            outline: none;
+        }
+
+        .list {
+            margin-top: 15px;
+        }
+
+        .item {
+            padding: 18px;
+            background: #fafafa;
+            border-left: 5px solid #0d6efd;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            transition: .3s;
+        }
+
+        .item:hover {
+            transform: translateY(-5px);
+            background: #eef5ff;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+
+        .item-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .item-desc {
+            font-size: 15px;
+            color: #555;
+        }
+
+        .btn {
+            margin-top: 10px;
+            display: inline-block;
+            padding: 8px 16px;
+            background: #0d6efd;
+            color: #fff;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: .3s;
+        }
+
+        .btn:hover {
+            background: #004fc4;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Shifokor Maslahatlari</h2>
+
+    <!-- Qidiruv qismi -->
+    <div class="search-box">
+        <input type="text" placeholder="Maslahatlarni qidiring...">
+    </div>
+
+    <!-- Maslahatlar ro‘yxati -->
+    <div class="list">
+
+        <div class="item">
+            <div class="item-title">Yurak salomatligini saqlash bo‘yicha maslahat</div>
+            <div class="item-desc">Sog‘lom ovqatlanish, muntazam jismoniy faollik yurak faoliyatini mustahkamlaydi.</div>
+            <a href="#" class="btn">Batafsil o‘qish</a>
+        </div>
+
+        <div class="item">
+            <div class="item-title">Qandli diabetni nazorat qilish</div>
+            <div class="item-desc">Shakar miqdorini doimiy o‘lchab borish va dietaga amal qilish juda muhim.</div>
+            <a href="#" class="btn">Batafsil o‘qish</a>
+        </div>
+
+        <div class="item">
+            <div class="item-title">Immunitetni mustahkamlash yo‘llari</div>
+            <div class="item-desc">Vitaminlarga boy mahsulotlarni yeyish va yaxshi uyqu — immunitetga foydali.</div>
+            <a href="#" class="btn">Batafsil o‘qish</a>
+        </div>
+
+        <div class="item">
+            <div class="item-title">Bosimni me’yorda ushlash</div>
+            <div class="item-desc">Tuz iste'molini kamaytirish va stressdan uzoq bo‘lish foydali.</div>
+            <a href="#" class="btn">Batafsil o‘qish</a>
+        </div>
+
+    </div>
+    
+</div>
+
+</body>
+</html>

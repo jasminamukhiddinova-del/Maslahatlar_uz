@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shifokor Profil</title>
+
+    <style>
+        *{
+            margin: 0; padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background: #eef3f7;
+        }
+
+        .container{
+            max-width: 950px;
+            margin: 35px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .header{
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .header img{
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 4px solid #2e7dd7;
+            object-fit: cover;
+        }
+
+        .name-box h2{
+            font-size: 30px;
+            color: #333;
+        }
+
+        .name-box p{
+            font-size: 16px;
+            color: #666;
+        }
+
+        .info-grid{
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .card{
+            padding: 22px;
+            background: #f9fbff;
+            border-left: 6px solid #2e7dd7;
+            border-radius: 10px;
+        }
+
+        .card h3{
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #0d4f8b;
+        }
+
+        .card p{
+            font-size: 16px;
+            color: #444;
+            line-height: 24px;
+        }
+
+        .edit-btn{
+            display: inline-block;
+            margin-top: 32px;
+            background: #2e7dd7;
+            padding: 12px 25px;
+            color: #fff;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 17px;
+            transition: 0.3s;
+        }
+
+        .edit-btn:hover{
+            background: #0d4f8b;
+        }
+
+        @media(max-width: 650px){
+            .header{
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .info-grid{
+                grid-template-columns: 1fr;
+            }
+
+            .header img{
+                width: 110px;
+                height: 110px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <img src="/rasm_videolar/doktor_panel_icon.ico" alt="doctor rasm">
+
+        <div class="name-box">
+            <h2>Dr. </h2>
+            <p><b>Mutaxassisligi:</b> </p>
+            <p><b>Email:</b> </p>
+            <p><b>Telefon:</b> </p>
+        </div>
+    </div>
+
+    <div class="info-grid">
+
+        <!-- Shaxsiy ma’lumotlar -->
+        <div class="card">
+            <h3>Shaxsiy ma’lumotlar</h3>
+            <p>Ism:      </p>
+            <p>Familiya:      </p>
+            <p>Tug‘ilgan sana:    </p>
+            <p>Manzil:     </p>
+        </div>
+
+        <!-- Ish tajribasi -->
+        <div class="card">
+            <h3>Ish tajribasi</h3>
+            <p>Tajriba yili:  </p>
+            <p>Ilmiy daraja: </p>
+            <p>Ish joyi: </p>
+        </div>
+
+        <!-- Qabul vaqtlari -->
+        <div class="card">
+            <h3>Qabul vaqtlari</h3>
+            <p>Dushanba - Juma: </p>
+            <p>Vaqt: </p>
+        </div>
+
+        <!-- Tizim ma’lumotlari -->
+        <div class="card">
+            <h3>Tizim ma’lumotlari</h3>
+            <p>Ro‘yxatdan o‘tgan sana: </p>
+            <p>Oxirgi tizimga kirgan vaqti: </p>
+            <p>Status: <b>Shifokor</b></p>
+        </div>
+
+    </div>
+
+    <a href="/doctor/edit-profile" class="edit-btn">Profilni tahrirlash</a>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Izohlar</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+        padding-top: 50px;
+        margin: 0;
+    }
+
+    .comment-container {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        width: 400px;
+    }
+
+    h2 {
+        text-align: center;
+        color: #eb4040;
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin: 15px 0 5px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    select {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+        margin-bottom: 15px;
+        font-family: inherit;
+        background-color: #fff;
+        cursor: pointer;
+    }
+
+    select:focus {
+        outline: none;
+        border-color: #eb4040;
+    }
+
+    textarea {
+        width: 100%;
+        height: 100px;
+        padding: 10px;
+        resize: none;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+        font-family: inherit;
+    }
+
+    input[type="range"] {
+        width: 100%;
+    }
+
+    .range-value {
+        text-align: right;
+        font-size: 14px;
+        color: #555;
+    }
+
+    button, .open-modal-btn {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        margin-top: 20px;
+        background-color: #eb4040;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover, .open-modal-btn:hover {
+        background-color: #c93636;
+    }
+
+    /* Modal CSS */
+    #modal-toggle {
+        display: none;
+    }
+
+    #modal-toggle:checked + #commentsModal {
+        display: block;
+    }
+
+    #commentsModal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.5);
+    }
+
+    .modal-content {
+        background-color: #fff;
+        margin: 10% auto;
+        padding: 20px;
+        border-radius: 12px;
+        width: 80%;
+        max-width: 500px;
+        position: relative;
+    }
+
+    .close-label {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        cursor: pointer;
+    }
+
+    .comment-box {
+        background-color: #f2f2f2;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 8px;
+    }
+
+    .comment-author {
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 5px;
+    }
+
+    .comment-text {
+        font-size: 14px;
+        color: #555;
+    }
+
+    .comment-rating {
+        color: #eb4040;
+        font-weight: bold;
+        margin-top: 5px;
+    }
+
+</style>
+</head>
+<body>
+
+<div class="comment-container">
+    <h2>Izoh qoldiring</h2>
+    
+    <label for="category">Kategoriya tanlang:</label>
+    <select id="category">
+        <option value="umumiy">Umumiy</option>
+        <option value="salomatlik">Salomatlik</option>
+        <option value="maslahat">Maslahat</option>
+        <option value="shikoyat">Shikoyat</option>
+    </select>
+    
+    <label for="comment">Izohingiz:</label>
+    <textarea id="comment" placeholder="Bu yerga izoh yozing..."></textarea>
+    
+    <label for="rating">Baholash:</label>
+    <input type="range" id="rating" min="1" max="5" value="3" oninput="document.getElementById('range-val').innerText = this.value">
+    <div class="range-value">Bahosi: <span id="range-val">3</span></div>
+    
+    <button type="button" onclick="alert('Izohingiz yuborildi!')">Yuborish</button>
+
+    <!-- Modalni ochish tugmasi -->
+    <label for="modal-toggle" class="open-modal-btn">Oldingi izohlarni ko‘rish</label>
+</div>
+
+<!-- Hidden checkbox -->
+<input type="checkbox" id="modal-toggle">
+
+<!-- Modal -->
+<div id="commentsModal">
+    <div class="modal-content">
+        <label for="modal-toggle" class="close-label">&times;</label>
+        <h3>Oldingi izohlar</h3>
+
+        <div class="comment-box">
+            <div class="comment-author">Jasmina Muxiddinova</div>
+            <div class="comment-text">Bu sayt juda foydali va tushunarli. Rahmat!</div>
+            <div class="comment-rating">Bahosi: 5/5</div>
+        </div>
+        <div class="comment-box">
+            <div class="comment-author">Ali Qodirov</div>
+            <div class="comment-text">Izohlar qoldirish funksiyasi yaxshi ishlaydi, faqat dizayni ozroq optimallashtirish kerak.</div>
+            <div class="comment-rating">Bahosi: 4/5</div>
+        </div>
+        <div class="comment-box">
+            <div class="comment-author">Nilufar Rustamova</div>
+            <div class="comment-text">Sayt interfeysi qulay va tez ishlaydi. Foydali maslahatlar uchun rahmat!</div>
+            <div class="comment-rating">Bahosi: 5/5</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

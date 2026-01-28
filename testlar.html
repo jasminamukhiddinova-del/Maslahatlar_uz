@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sog'liq testlari</title>
+
+    <style>
+        *{
+            margin: 0; padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body{
+            background: #f2f7ff;
+            color: #333;
+            padding: 20px;
+        }
+        .container{
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        h1{
+            text-align: center;
+            margin-bottom: 15px;
+            color: #0059b3;
+        }
+        h2{
+            margin-top: 25px;
+            color: #0059b3;
+            border-left: 6px solid #0059b3;
+            padding-left: 10px;
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 15px;
+            margin-top: 10px;
+        }
+        label{
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+        input, select, textarea{
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #c9d7f3;
+            border-radius: 8px;
+            background: #f9fbff;
+            font-size: 15px;
+        }
+        textarea{
+            height: 110px;
+            resize: none;
+        }
+        .range-box{
+            display: flex;
+            flex-direction: column;
+        }
+        input[type="range"]{
+            margin-top: 10px;
+        }
+        footer{
+            text-align: center;
+            margin-top: 25px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Sog'liq testlari</h1>
+        <p style="text-align:center; margin-bottom:20px; color:#666;">
+            Sog‘lig'ingiz bo‘yicha umumiy ma’lumotlarni to‘ldiring
+        </p>
+
+        <!-- Shaxsiy ma'lumotlar -->
+        <h2>Shaxsiy ma'lumotlar</h2>
+        <div class="grid">
+            <div>
+                <label>Ism-familiya</label>
+                <input type="text" placeholder="Ismingizni kiriting">
+            </div>
+            <div>
+                <label>Yosh</label>
+                <input type="number" placeholder="25">
+            </div>
+            <div>
+                <label>Jinsi</label>
+                <select>
+                    <option>Erkak</option>
+                    <option>Ayol</option>
+                </select>
+            </div>
+            <div>
+                <label>Bo‘yingiz (cm)</label>
+                <input type="number" placeholder="170">
+            </div>
+            <div>
+                <label>Vazningiz (kg)</label>
+                <input type="number" placeholder="70">
+            </div>
+        </div>
+
+        <!-- Hayotiy ko'rsatkichlar -->
+        <h2>Hayotiy ko‘rsatkichlar</h2>
+        <div class="grid">
+            <div>
+                <label>Qon bosimi – sistolik</label>
+                <input type="number" placeholder="120">
+            </div>
+            <div>
+                <label>Qon bosimi – diastolik</label>
+                <input type="number" placeholder="80">
+            </div>
+            <div>
+                <label>Puls (minutiga)</label>
+                <input type="number" placeholder="72">
+            </div>
+            <div>
+                <label>Qondagi qand (mg/dL)</label>
+                <input type="number" placeholder="90">
+            </div>
+            <div>
+                <label>Xolesterin (mg/dL)</label>
+                <input type="number" placeholder="180">
+            </div>
+        </div>
+
+        <!-- Hayot tarzi -->
+        <h2>Hayot tarzi</h2>
+        <div class="grid">
+            <div>
+                <label>Chekish</label>
+                <select>
+                    <option>Yo‘q</option>
+                    <option>Ba’zan</option>
+                    <option>Ha</option>
+                </select>
+            </div>
+            <div>
+                <label>Alkogol iste'moli</label>
+                <select>
+                    <option>Yo‘q</option>
+                    <option>O‘rtacha</option>
+                    <option>Ko‘p</option>
+                </select>
+            </div>
+            <div class="range-box">
+                <label>Jismoniy mashq (haftasiga)</label>
+                <input type="range" min="0" max="7" value="3">
+            </div>
+            <div>
+                <label>Stress darajasi</label>
+                <select>
+                    <option>Yuqori</option>
+                    <option>O‘rtacha</option>
+                    <option>Past</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Qo'shimcha izoh -->
+        <h2>Qo‘shimcha izoh</h2>
+        <textarea placeholder="Agar muammo yoki belgi bo‘lsa bu yerga yozing..."></textarea>
+
+        <footer>
+           © 2025 — Sog'liq testlari. Bu sahifada hisoblash ishlari yo‘q, faqat ma’lumot to‘plash uchun.
+        </footer>
+
+    </div>
+
+</body>
+</html>

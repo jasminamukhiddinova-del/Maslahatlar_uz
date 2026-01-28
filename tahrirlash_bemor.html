@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bemor profilini tahrirlash</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .profile-photo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-photo img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #28a745;
+        }
+
+        .profile-photo input {
+            margin-top: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 15px;
+            color: #444;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: #28a745;
+        }
+
+        .btn-save {
+            width: 100%;
+            padding: 12px;
+            background: #28a745;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn-save:hover {
+            background: #1c7e33;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Bemor profilini tahrirlash</h2>
+
+    <div class="profile-photo">
+        <img src="/static/default_patient.png" alt="Profil rasmi">
+        <input type="file" accept="image/*">
+    </div>
+
+    <form>
+
+        <div class="form-group">
+            <label>Ism</label>
+            <input type="text" placeholder="Ismingiz">
+        </div>
+
+        <div class="form-group">
+            <label>Familiya</label>
+            <input type="text" placeholder="Familiyangiz">
+        </div>
+
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="Email manzil">
+        </div>
+
+        <div class="form-group">
+            <label>Telefon</label>
+            <input type="text" placeholder="+998 ** *** ** **">
+        </div>
+
+        <div class="form-group">
+            <label>Yosh</label>
+            <input type="number" placeholder="Yoshingiz">
+        </div>
+
+        <div class="form-group">
+            <label>Jinsi</label>
+            <select>
+                <option>Erkak</option>
+                <option>Ayol</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Manzil</label>
+            <textarea rows="3" placeholder="Yashash manzilingiz..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Kasallik tarixi / izoh</label>
+            <textarea rows="4" placeholder="Kasallik tarixi yoki qo'shimcha ma'lumot..."></textarea>
+        </div>
+
+        <button class="btn-save">O'zgarishlarni saqlash</button>
+
+    </form>
+</div>
+
+</body>
+</html>

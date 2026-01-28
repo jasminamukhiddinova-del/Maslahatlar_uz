@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shifokor Sahifasi</title>
+<style>
+/* Sizning berilgan CSS shu yerga qo'yildi */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f1f8f6;
+  display: flex;
+  min-height: 100vh;
+  overflow-x: hidden;
+  animation: fadeInBody 1s ease forwards;
+}
+@keyframes fadeInBody { from {opacity:0;} to {opacity:1;} }
+
+.sidebar {
+  width: 250px;
+  background: #2e7d32;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  height: 100vh;
+  left: -300px;
+  top: 0;
+  animation: slideIn 0.8s forwards;
+}
+@keyframes slideIn {
+  to {left: 0;}
+}
+.sidebar h2 {
+  text-align: center;
+  margin: 20px 0;
+  opacity: 0;
+  animation: fadeInText 0.8s forwards 0.5s;
+}
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 15px 25px;
+  font-size: 16px;
+  border-left: 5px solid transparent;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeInText 0.8s forwards 0.6s;
+}
+.sidebar a:hover {
+  background: #388e3c;
+  border-left: 5px solid #a5d6a7;
+}
+.sidebar .logout {
+  background: #c62828;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.3);
+}
+.sidebar .logout:hover {
+  background: #b71c1c;
+}
+.main {
+  margin-left: 250px;
+  padding: 30px;
+  flex:1;
+  opacity:0;
+  animation: fadeInText 1s forwards 1s;
+}
+
+.header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#ffffff;
+  padding:15px 25px;
+  border-radius:12px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+  transform:translateY(-30px);
+  opacity:0;
+  animation: slideDown 0.6s forwards 1.2s;
+}
+@keyframes slideDown { to { transform:translateY(0); opacity:1; } }
+
+.header h1 {
+  font-size:22px;
+  color:#2e7d32;
+  animation: colorChange 5s infinite alternate;
+}
+@keyframes colorChange {
+  0% {color:#2e7d32;} 25% {color:#388e3c;} 50% {color:#ff9800;} 75% {color:#f44336;} 100% {color:#33691e;}
+}
+
+.profile-pic { width:45px; height:45px; border-radius:50%; border:2px solid #a5d6a7; transition: transform 0.3s ease; }
+.profile-pic:hover { transform:scale(1.2) rotate(10deg); }
+
+.section { background:#fff; border-radius:12px; box-shadow:0 3px 8px rgba(0,0,0,0.1); padding:20px; margin-top:20px; transform:translateY(20px); opacity:0; animation:fadeUp 0.6s forwards; }
+.section:nth-child(3){animation-delay:1.4s;}
+.section:nth-child(4){animation-delay:1.6s;}
+.section:nth-child(5){animation-delay:1.8s;}
+.section:nth-child(6){animation-delay:2s;}
+@keyframes fadeUp { to {transform:translateY(0); opacity:1;} }
+
+.card-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); gap:15px; }
+.card { background:#f9fbe7; border-radius:10px; padding:15px; border:1px solid #c5e1a5; transition: transform 0.3s ease, box-shadow 0.3s ease; opacity:0; animation: fadeInText 0.6s forwards; }
+.card:nth-child(1){animation-delay:2.2s;}
+.card:nth-child(2){animation-delay:2.4s;}
+.card:nth-child(3){animation-delay:2.6s;}
+.card:hover { transform:translateY(-5px) scale(1.05); box-shadow:0 8px 20px rgba(0,0,0,0.2); }
+
+button { background:#2e7d32; color:white; padding:10px 20px; border:none; border-radius:8px; cursor:pointer; transition: transform 0.2s ease, background 0.3s ease; }
+button:hover { transform:scale(1.05) rotate(-2deg); background:#388e3c; }
+
+footer { text-align:center; padding:20px; margin-top:40px; color:#666; font-size:14px; opacity:0; animation: fadeInText 0.6s forwards 2.8s; }
+footer a { color:#2e7d32; margin:0 8px; text-decoration:none; }
+footer a:hover { text-decoration:underline; }
+
+@keyframes fadeInText { to {opacity:1;} }
+</style>
+</head>
+<body>
+  <div class="sidebar">
+    <div>
+      <h2>🩺 Shifokor Paneli</h2>
+      <a href="/asosiy_/doctor_profil.html">👤 Profil</a>
+      <a href="/asosiy_/maslahatlar_shifokot.html">💬 Maslahat Yuklash</a>
+      <a href="/asosiy_/maqola_yuklash.html">📚 Maqola Yuklash</a>
+      <a href="/asosiy_/test_yuklash.html">🧪 Test Yuklash</a>
+      <a href="/asosiy_/chat_bemor.html">💬 Chatlar</a>
+      <a href="#statistika">📊 Statistika</a>
+    </div>
+    <a href="/asosiy_/index.html" class="logout">🚪 Chiqish</a>
+  </div>
+
+  <div class="main">
+    <div class="header">
+      <h1>Onlayn Shifokor – Shifokor Sahifasi</h1>
+      <img src="/rasm_videolar/doctor1.png" alt="profil" class="profile-pic">
+    </div>
+
+    <section id="profil" class="section">
+      <h3>👤 Profil ma'lumotlari</h3>
+      <div class="card">
+        <p><strong>Ism:</strong> Dr. Azizbek</p>
+        <p><strong>Mutaxassislik:</strong> Terapevt</p>
+        <p><strong>Email:</strong> dr.aziz@example.com</p>
+        <button>Tahrirlash</button>
+      </div>
+    </section>
+
+    <section id="maslahat" class="section">
+      <h3>💬 Maslahat Yuklash</h3>
+      <div class="card">
+        <input type="text" placeholder="Maslahat sarlavhasi">
+        <textarea rows="4" placeholder="Maslahatni kiriting..."></textarea>
+        <button>Yuklash</button>
+      </div>
+    </section>
+
+    <section id="maqola" class="section">
+      <h3>📚 Maqola Yuklash</h3>
+      <div class="card">
+        <input type="file">
+        <button>Yuklash</button>
+      </div>
+    </section>
+
+    <section id="test" class="section">
+      <h3>🧪 Test Yuklash</h3>
+      <div class="card">
+        <input type="text" placeholder="Test mavzusi">
+        <input type="file">
+        <button>Yuklash</button>
+      </div>
+    </section>
+
+    <section id="chat" class="section">
+      <h3>💬 Bemorlar bilan Chatlar</h3>
+      <div class="card">
+        <ul>
+          <li><a href="/asosiy_/chat_doctor.html">Dilnoza Karimova (chatni ochish)</a></li>
+          <li><a href="/asosiy_/chat_doctor.html">Jasur To‘xtayev (chatni ochish)</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="statistika" class="section">
+      <h3>📊 Faoliyat statistikasi</h3>
+      <div class="card-grid">
+        <div class="card">Bugungi maslahatlar: <strong>5</strong></div>
+        <div class="card">Umumiy maqolalar: <strong>12</strong></div>
+        <div class="card">Faol bemorlar: <strong>8</strong></div>
+      </div>
+    </section>
+
+    <footer>
+      &copy; 2025 Onlayn Shifokor | <a href="#">Foydalanish shartlari</a>
+    </footer>
+  </div>
+</body>
+</html>

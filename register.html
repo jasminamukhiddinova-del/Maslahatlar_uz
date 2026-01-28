@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ro‘yxatdan o‘tish - Onlayn Shifokor</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #c8e6c9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .register-container {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 380px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #00796b;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      text-align: left;
+      margin-bottom: 5px;
+      color: #333;
+      font-weight: 500;
+    }
+
+    input, select {
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+      outline: none;
+    }
+
+    input:focus, select:focus {
+      border-color: #00796b;
+      box-shadow: 0 0 5px #80cbc4;
+    }
+
+    button {
+      background-color: #00796b;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #004d40;
+    }
+
+    .extra-links {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .extra-links a {
+      color: #00796b;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .extra-links a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="register-container">
+    <h2>Ro‘yxatdan o‘tish</h2>
+    <form method="post" action="">
+      
+      <label for="name">Ism:</label>
+      <input type="text" id="name" name="name" placeholder="Ismingizni kiriting" required>
+
+      <label for="email">Email manzil:</label>
+      <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+
+      <label for="password">Parol:</label>
+      <input type="password" id="password" name="password" placeholder="Parol kiriting" required>
+
+      <label for="role">Rolni tanlang:</label>
+      <select id="role" name="role" required>
+        <option value="">-- Rolni tanlang --</option>
+        <option value="doctor">Shifokor</option>
+        <option value="patient">Bemor</option>
+      </select>
+
+      <button type="submit">Ro‘yxatdan o‘tish</button>
+
+      <div class="extra-links">
+        <p>Allaqachon hisobingiz bormi? <a href="/asosiy_/login.html">Kirish</a></p>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
